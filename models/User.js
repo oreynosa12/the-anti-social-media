@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 
 // Schema to create User model
-const UserSchema = new Schema(
+const userSchema = new Schema(
   {
     userName: {
       type: String,
@@ -27,7 +27,7 @@ const UserSchema = new Schema(
           ref: 'User',
         },
       ],
-    friendCount: [friends],
+    // friendCount: [friends],
   },
   {
     toJSON: {
@@ -37,6 +37,6 @@ const UserSchema = new Schema(
   }
 );
 
-const User = model('User', UserSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
